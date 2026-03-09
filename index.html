@@ -62,90 +62,100 @@
     }
 
     /* =====================
-       NAV
-    ===================== */
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      padding: 14px 0;
-    }
+   NAV
+===================== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 10px 0;
+}
 
-    .nav::before {
-      content: "";
-      position: absolute;
-      left: 50%; top: 0;
-      transform: translateX(-50%);
-      width: 100vw; height: 100%;
-      background: rgba(6,8,16,.7);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      z-index: -1;
-    }
+.nav::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background: rgba(6, 8, 16, 0.82);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: -1;
+}
 
-    .navInner {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
+.navInner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 1.35rem;
-      letter-spacing: -.01em;
-      white-space: nowrap;
-    }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
 
-    .logo-wrap {
-      width: 60px; height: 44px;
-      border-radius: 12px;
-      overflow: hidden;
-      flex: 0 0 auto;
-    }
+.logo-wrap {
+  width: 52px;
+  height: 38px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
 
-    .logo-img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 
-    .nav-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 6px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(46,229,157,.35);
-      background: rgba(46,229,157,.07);
-      color: var(--green);
-      font-size: .82rem;
-      font-weight: 600;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-    }
+.nav-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(46,229,157,.22);
+  background: rgba(46,229,157,.05);
+  color: var(--green);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
 
-    .nav-badge::before {
-      content: "";
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 8px var(--green);
-      animation: pulse 2s infinite;
-    }
+.nav::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background: rgba(8, 14, 28, 0.42);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: -1;
+}
 
-    @keyframes pulse {
-      0%,100% { opacity: 1; transform: scale(1); }
-      50% { opacity: .5; transform: scale(.8); }
-    }
+@keyframes pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .55; transform: scale(.82); }
+}
 
     /* =====================
        HERO
@@ -515,35 +525,6 @@
     .notice.error { color: #ff7a7a; }
 
     /* =====================
-       COMMUNITY
-    ===================== */
-    .community-row {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .community-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.02);
-      color: var(--muted);
-      font-size: .88rem;
-    }
-
-    .community-pill .dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 6px var(--green);
-    }
-
-    /* =====================
        FOOTER
     ===================== */
     .footer {
@@ -600,11 +581,19 @@
         <div class="hero-kicker"><span></span>Personal Systems · Signals · Recovery</div>
         <h1>Your body sends<br><em>signals.</em><br>Learn to read them.</h1>
         <p class="hero-lead">
-          Most people collect wearable data and still guess. The Self-Care Lab helps you build a real feedback loop—notice signals, learn your baseline, run small experiments, reinforce what works.
+          Stress shifts. Sleep changes. Energy rises and falls.
+        <!-- </p>
+        <p class="hero-lead"> -->
+          Wearables give you numbers. But numbers alone don't tell you what to change.
+        </p>
+        <p class="hero-lead">
+          The Self-Care Lab helps you learn what actually works:<br>
+          baseline → experiments → routines that evolve with you
         </p>
         <div class="cta-row">
-          <a class="btn btn-green" href="#waitlist">Join the Waitlist</a>
-          <a class="btn btn-ghost" href="#approach">How It Works</a>
+          <a class="btn btn-green" href="https://docs.google.com/forms/d/e/1FAIpQLSdUsCuD4CEx-7ow7-uRpOJXKo5Qas2EdEXJWOyivuAk8Cy6yg/viewform?usp=publish-editor" target="_blank" rel="noreferrer">Join the Early Community</a>
+          <a class="btn btn-outline" href="#waitlist">Sign Up for Waitlist</a>
+          <!-- <a class="btn btn-ghost" href="#approach">How It Works</a> -->
         </div>
       </div>
 
@@ -629,7 +618,7 @@
           <div class="step-icon">🧪</div>
           <div class="step-info">
             <div class="step-label">Experiments</div>
-            <div class="step-desc">Test small changes — sleep, caffeine, load</div>
+            <div class="step-desc">Test small changes — sleep, caffeine, training load</div>
           </div>
         </div>
         <div class="loop-arrow">↓</div>
@@ -645,13 +634,15 @@
 
     <!-- PROBLEM / APPROACH -->
     <section class="section fade-up" id="approach">
-      <div class="section-label">The Problem + The Fix</div>
+      <div class="section-label">Why most tools fall short</div>
       <div class="two-col">
         <div class="block">
-          <h2>You have data.<br>Not clarity.</h2>
-          <p>Wearables give you numbers—HRV, sleep stages, strain, recovery scores—but don't tell you what to actually do next. You're left guessing what's driving your stress, sleep, and energy, or chasing scores without a reliable way to understand your own patterns.</p>
-          <p>The missing piece isn't more tracking. It's structure.</p>
+          <h2>More summaries.<br>Not more understanding.</h2>
+          <p>Most health tools reduce your experience to stats, tips, or generic advice. They can show you what happened, but not why things are shifting or what to change next.</p>
+          <p>What helps one person may do nothing for another. And what works for you can change over time.</p>
+          <p>The missing piece isn't more tracking. It's a way to learn what works for you.</p>
         </div>
+
         <div class="block green-border">
           <h2>A loop, not a score.</h2>
           <ul class="approach-list">
@@ -659,28 +650,28 @@
               <div class="approach-dot">1</div>
               <div class="approach-content">
                 <strong>Signals</strong>
-                <span>Ingest your wearable exports (Apple Health, Whoop, Garmin, Oura) + one-minute daily check-ins.</span>
+                <span>Capture what’s happening with wearable inputs and quick daily check-ins.</span>
               </div>
             </li>
             <li class="approach-item">
               <div class="approach-dot">2</div>
               <div class="approach-content">
                 <strong>Baseline</strong>
-                <span>Learn your normal range. Spot drift early. Understand what's actually off—not just red scores.</span>
+                <span>Learn your normal range so drift becomes visible early.</span>
               </div>
             </li>
             <li class="approach-item">
               <div class="approach-dot">3</div>
               <div class="approach-content">
                 <strong>Experiments</strong>
-                <span>Test small, targeted changes: sleep timing, caffeine window, training load, workload rhythms.</span>
+                <span>Test small changes like sleep timing, caffeine, training load, or work rhythms.</span>
               </div>
             </li>
             <li class="approach-item">
               <div class="approach-dot">4</div>
               <div class="approach-content">
                 <strong>Reinforce</strong>
-                <span>Keep what helps, drop what doesn't, let your routine evolve with you—not against you.</span>
+                <span>Keep what works. Drop what doesn’t. Let routines evolve with you.</span>
               </div>
             </li>
           </ul>
@@ -695,37 +686,22 @@
         <div class="card">
           <span class="card-icon">🔋</span>
           <h3>Stress & Recovery Tracking</h3>
-          <p>See cumulative stress patterns, catch drift early, and understand which inputs actually shift your recovery.</p>
+          <p>See cumulative stress patterns, catch drift early, and understand which habits actually affect recovery.</p>
         </div>
         <div class="card">
           <span class="card-icon">😴</span>
           <h3>Sleep Feedback Loop</h3>
-          <p>Move past sleep scores. Understand what changes sleep quality for your body—and build a rhythm that holds.</p>
+          <p>Move beyond sleep scores. Learn what improves sleep for your body and build routines that hold.</p>
         </div>
         <div class="card">
           <span class="card-icon">🧘</span>
           <h3>Daily Check-Ins</h3>
-          <p>One-minute anchors that connect how you feel and perform to what the data says—not the other way around.</p>
+          <p>Quick daily anchors that connect how you feel with what you're doing — so patterns become visible.</p>
         </div>
         <div class="card card-accent">
           <span class="card-icon">🤝</span>
           <h3>Community Learning</h3>
-          <p>Shape the product early and join a real community learning, experimenting, and finding support for self-care—not a highlight reel.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- COMMUNITY -->
-    <section class="section fade-up">
-      <div class="block" style="border-color: rgba(46,229,157,.15); background: rgba(46,229,157,.03);">
-        <h2 style="margin-bottom:10px;">Built for real life. Not perfection.</h2>
-        <p style="color:var(--muted); max-width:62ch;">No miracle scores. No vague "wellness." This is a practical, testable, personal system—built messy-reality-first. If you want a real feedback loop, you're in the right place.</p>
-        <div class="community-row">
-          <div class="community-pill"><span class="dot"></span> Wearable-agnostic</div>
-          <div class="community-pill"><span class="dot"></span> 1-min daily check-in</div>
-          <div class="community-pill"><span class="dot"></span> Run small experiments</div>
-          <div class="community-pill"><span class="dot"></span> Community-shaped</div>
-          <div class="community-pill"><span class="dot"></span> Early access</div>
+          <p>Shape the product early and join a real community learning, experimenting, and finding support for self-care—not chasing scores.</p>
         </div>
       </div>
     </section>
@@ -733,14 +709,18 @@
     <!-- WAITLIST -->
     <section class="section fade-up" id="waitlist">
       <div class="waitlist-block">
-        <h2>Join the Lab</h2>
-        <p>Drop your email to get early access, help shape the product, and join a community building real self-care systems—not chasing scores.</p>
+        <h2>Built for you, not just chasing scores.</h2>
+        <p>
+          Join early access to help shape the product, grow with the community, and build real self-care routiness together.
+        </p>
         <div class="form-row">
           <input type="email" id="waitlist-email" placeholder="Email address" autocomplete="email" required />
           <button class="btn btn-green" onclick="handleWaitlist()">Join Waitlist</button>
         </div>
         <div class="notice" id="waitlist-status"></div>
-        <p style="color:var(--subtle); font-size:.82rem; margin-top:16px; margin-bottom:0;">No spam. No vague wellness content. Just signal.</p>
+        <p style="color:var(--subtle); font-size:.82rem; margin-top:16px; margin-bottom:0;">
+          Early access · Community-shaped · No spam
+        </p>
       </div>
     </section>
 
